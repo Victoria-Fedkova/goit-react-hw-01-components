@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { ProfileWrapper, Description, UserAvatar, UserName, UserInfo, StatsList, StatsItem, Statslabel,StatsQuantity} from "./Profile.styled";
-
+import { formatNumber } from 'utils';
 
 function Profile({username, tag, location, avatar, stats }){
   const statsKeys = Object.keys(stats);
@@ -22,7 +22,7 @@ return <ProfileWrapper key={tag}>
     return (
     <StatsItem key={key} itemsCount={statsKeys.length}>
       <Statslabel>{label}</Statslabel>
-      <StatsQuantity>{stats[key]}</StatsQuantity>
+      <StatsQuantity>{formatNumber(stats[key])}</StatsQuantity>
     </StatsItem>
   )})}
 </StatsList>
