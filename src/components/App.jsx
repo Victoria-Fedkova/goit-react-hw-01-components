@@ -1,27 +1,21 @@
-import data from './data.json';
-import user from './user.json';
-import friends from './friends.json'
-import transactions from './transactions'
+import data from './Statistics/data.json';
+import user from './Profile/user.json';
+import friends from './FriendList/friends.json'
+import transactions from './TransactionHistory/transactions.json'
 
-import Profile from './Profile';
-import Section from './Section';
-import Statistics from './Statistics';
-import FriendList from './FriendList';
-import TransactionHistory from './TransactionHistory'
+import Profile from './Profile/Profile';
+import Section from './Section/Section';
+import Statistics from './Statistics/Statistics';
+import FriendList from './FriendList/FriendList';
+import TransactionHistory from './TransactionHistory/TransactionHistory'
+
+import { Container } from './style';
 
 export const App = () => {
   return (
-    <div>
-      {/* style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }} */}
+    <Container>
 
-      <Section title="Task 1">
+      <Section title="Task 1 'Profile'">
         <Profile
           username={user.username}
           tag={user.tag}
@@ -31,18 +25,18 @@ export const App = () => {
         />      
       </Section>
 
-      <Section title="Task 2">
+      <Section title="Task 2 'Statistics'">
         <Statistics title="Upload stats" stats={data} />
         <Statistics stats={data} />
       </Section>
 
-      <Section title="Task 3">
-        <FriendList friends={friends} />;
+      <Section title="Task 3 'Friends List'">
+        <FriendList friends={friends} />
       </Section>
 
-      <Section title="Task 4">
-      <TransactionHistory items={transactions} />;
+      <Section title="Task 4 'Transaction History'">
+      <TransactionHistory items={transactions} />
       </Section>
-    </div>
+    </Container>
   );   
 };

@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
+import { Container, Title } from "./styles";
 
 function Section({ title, children }) {
   return (
-    <div>
-      {title && <h2>{title}</h2>}
+    <Container>
+      {title && <Title>{title}</Title>}
       {children}
-    </div>
+    </Container>
   );
 }
 
