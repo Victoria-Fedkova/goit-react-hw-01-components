@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-import StatisticsTableRow from './StatisticsTableRow';
-import {StatisticsSection, StatisticsTitle, StatList, StatItem} from './Statistics.styled'
+import {StatisticsSection, StatisticsTitle, StatList, StatItem, Label, Percentage} from './Statistics.styled'
 import { getRandomHexColor } from 'utils';
 
 function Statistics ({title,stats}){
@@ -11,10 +10,8 @@ function Statistics ({title,stats}){
       <StatList >
           {stats.map((item) => (
             <StatItem key={item.id} itemsCount={stats.length} bg={getRandomHexColor()}>
-              <StatisticsTableRow 
-              label={item.label}
-              percentage={item.percentage}
-              />
+              <Label>{item.label}</Label>
+              <Percentage>{item.percentage}%</Percentage>
           </StatItem>
           ))}
       </StatList>
@@ -27,6 +24,8 @@ Statistics.propTypes ={
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
     })
   ),
     
