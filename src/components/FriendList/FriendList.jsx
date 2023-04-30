@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import FriendItem from './FriendItem';
-import {ItemContainer} from './styles';
+import {ItemContainer} from './FriendList.styled';
 
 
 function FriendList ({friends}){

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ProfileWrapper, Description, UserAvatar, UserName, UserInfo, StatsList, StatsItem, Statslabel,StatsQuantity} from "./styles";
+import { ProfileWrapper, Description, UserAvatar, UserName, UserInfo, StatsList, StatsItem, Statslabel,StatsQuantity} from "./Profile.styled";
 
 
 function Profile({username, tag, location, avatar, stats }){

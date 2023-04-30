@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {Label, Percentage} from './styles'
+import {Label, Percentage} from './Statistics.styled'
 
 
 function StatisticsTableRow (item){

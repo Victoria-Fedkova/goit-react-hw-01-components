@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import StatisticsTableRow from './StatisticsTableRow';
-import {StatisticsSection, StatisticsTitle, StatList, StatItem} from './styles'
+import {StatisticsSection, StatisticsTitle, StatList, StatItem} from './Statistics.styled'
 import { getRandomHexColor } from 'utils';
 
 function Statistics ({title,stats}){
